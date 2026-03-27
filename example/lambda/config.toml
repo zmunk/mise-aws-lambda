@@ -1,0 +1,9 @@
+role_name = "my-lambda-function-role"
+function_name = "my-lambda-function"
+cache_folder = ".cache"
+role_trust_policy_file = "trust-policy.json"
+
+package_files = [
+  "lambda_function.py",
+]
+python_version = "python3.12"

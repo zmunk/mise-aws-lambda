@@ -1,0 +1,5 @@
+[plugins]
+lambda = "https://github.com/zmunk/mise-aws-lambda"
+
+[tools]
+lambda = "latest"
