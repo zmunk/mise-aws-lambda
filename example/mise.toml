@@ -1,5 +1,8 @@
 [plugins]
-lambda = "https://github.com/zmunk/mise-aws-lambda"
+lambdax = "https://github.com/zmunk/mise-aws-lambda"
 
 [tools]
-lambda = "latest"
+lambdax = "latest"
+
+[env]
+LAMBDAX_ROOT = "lambda/"

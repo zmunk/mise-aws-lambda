@@ -1,9 +1,21 @@
 role_name = "my-lambda-function-role"
 function_name = "my-lambda-function"
-cache_folder = ".cache"
 role_trust_policy_file = "trust-policy.json"
-
-package_files = [
-  "lambda_function.py",
-]
 python_version = "python3.12"
+
+# specify files to include in the lambda function
+# relative to the config root directory
+[package]
+include = ["**/*.py"]
+exclude = [".env"]
+
+# build and attach a lambda dependency layer
+[layers.fastapi]
+libraries = ['fastapi']
+pip_args = [] # supply any additional pip arguments to the 'pip install command'
+
+[env]
+IS_PRODUCTION = "true"
+# For secret environment variables that shouldn't be visible in version control,
+# set them in config.local.coml
+
